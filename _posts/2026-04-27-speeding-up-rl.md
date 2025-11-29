@@ -161,7 +161,7 @@ Additionally, Gymnasium introduces the following changes over Gym:
 
 This section demonstrates the application of Gym and other associated libraries to implement a custom Gridworld environment called *Doors*. In this environment, an agent occupies a cell within a grid and is tasked with navigating towards a goal cell by passing through one of three gaps (doors) that divide the grid in two, as illustrated in Figure 3. The figure also depicts state-action configurations.
 
-{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/Doors_.png" class="img-fluid" %}
+{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/doors.png" class="img-fluid" %}
 <div class="caption">
 Figure 3: The *Doors* environment, with its state, action, and reward configurations.
 </div>
@@ -688,7 +688,7 @@ initialized within the `.reset()` function by generating a corresponding set of 
 This vectorization has proven to be significantly advantageous in our experiments. To confirm this, we evaluated the runtime performance for a range of DOORS environment counts, employing JAX, Gym Synchronous, Gym Asynchronous, and JAX with accelerated looping between steps (a common performance bottleneck in Python). The runtime results for these methods are presented in Figure 11 below.
 
 
-{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/runtimeEnvs.png" class="img-fluid" %}
+{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/runtimeenvs.png" class="img-fluid" %}
 
 <div class="caption">
 Figure 10: Comparing runtime of different vectorization methods. JAX demonstrates resilience to increasing environment counts, maintaining performance up to 500 environments.  Accelerating the for loop resulted in 
@@ -839,12 +839,12 @@ Table 2: Performance and Runtime of Training a DQN Agent to solve the DOORS Envi
 
 </table>
 <br>
-{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/PytorchNumpy.png" class="img-fluid" %}
+{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/pytorchnumpy.png" class="img-fluid" %}
 <div class="caption">
 Figure 11: Pytorch for DQN with Numpy for Environment
 </div>
 
-{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/FLAXNumpy.png" class="img-fluid" %}
+{% include figure.liquid path="assets/img/2026-04-27-speeding-up-rl/flaxnumpy.png" class="img-fluid" %}
 <div class="caption">
 Figure 12: FLAX for DQN with Numpy for Environment
 </div>
