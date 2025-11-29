@@ -878,7 +878,7 @@ Therefore, a thorough examination of the training pipeline is recommended to ide
 
 # Additional JAX Libraries
 
-To avoid reinventing the wheel when writting JAX programs wanting, it is useful to explore open-source clean JAX projects for Reinforcement Learning or Environment Simulation, that can be imported and edited as needed. 
+To avoid reinventing the wheel when writing JAX programs, it is useful to explore open-source clean JAX projects for Reinforcement Learning or Environment Simulation, that can be imported and edited as needed. 
 
 ## Brax
 
